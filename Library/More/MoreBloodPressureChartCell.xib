@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumBarunGothic.ttf">
+            <string>NanumBarunGothic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="263" id="th2-4q-ytV" customClass="MoreBloodPressureChartCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="263"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="th2-4q-ytV" id="3Gm-Mo-UaY">
+                <frame key="frameInset" width="320" height="262"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lka-cA-6wo">
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7cp-ns-ldR">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oj9-ed-kdU">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="FJq-V9-Ite"/>
+                                            <constraint firstAttribute="width" constant="40" id="Wm2-aQ-1E4"/>
+                                        </constraints>
+                                        <state key="normal" image="tab_btn_left"/>
+                                        <connections>
+                                            <action selector="goPrevious:" destination="th2-4q-ytV" eventType="touchUpInside" id="VxY-Ln-ZAJ"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 5건" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJW-H5-Yzg">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="18C-xg-kTl"/>
+                                            <constraint firstAttribute="height" constant="21" id="lhe-IR-l1c"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="16"/>
+                                        <color key="textColor" red="0.31372549020000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pab-nh-Vol">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="bc9-75-pi8"/>
+                                            <constraint firstAttribute="width" constant="40" id="wvt-jG-g1V"/>
+                                        </constraints>
+                                        <state key="normal" image="tab_btn_right"/>
+                                        <connections>
+                                            <action selector="goNext:" destination="th2-4q-ytV" eventType="touchUpInside" id="awE-H4-mYw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="LJW-H5-Yzg" firstAttribute="leading" secondItem="oj9-ed-kdU" secondAttribute="trailing" constant="8" id="9Gh-fG-6Ix"/>
+                                    <constraint firstAttribute="height" constant="40" id="9NU-3c-yaK"/>
+                                    <constraint firstItem="oj9-ed-kdU" firstAttribute="top" secondItem="7cp-ns-ldR" secondAttribute="top" id="A47-vw-y01"/>
+                                    <constraint firstItem="LJW-H5-Yzg" firstAttribute="centerX" secondItem="7cp-ns-ldR" secondAttribute="centerX" id="EWW-LP-n1e"/>
+                                    <constraint firstItem="Pab-nh-Vol" firstAttribute="top" secondItem="7cp-ns-ldR" secondAttribute="top" id="IcX-8u-aGS"/>
+                                    <constraint firstItem="LJW-H5-Yzg" firstAttribute="top" secondItem="7cp-ns-ldR" secondAttribute="top" constant="9" id="Lwb-7k-shz"/>
+                                    <constraint firstItem="Pab-nh-Vol" firstAttribute="leading" secondItem="LJW-H5-Yzg" secondAttribute="trailing" constant="8" id="Nrh-t7-zH9"/>
+                                </constraints>
+                            </view>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4B-hf-fl6">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7cp-ns-ldR" firstAttribute="top" secondItem="lka-cA-6wo" secondAttribute="top" constant="8" id="2Yh-EE-aGp"/>
+                            <constraint firstItem="i4B-hf-fl6" firstAttribute="top" secondItem="7cp-ns-ldR" secondAttribute="bottom" constant="8" id="3aS-tE-cIC"/>
+                            <constraint firstAttribute="trailing" secondItem="i4B-hf-fl6" secondAttribute="trailing" constant="8" id="G8G-jF-oID"/>
+                            <constraint firstAttribute="trailing" secondItem="7cp-ns-ldR" secondAttribute="trailing" constant="8" id="Nar-jW-agj"/>
+                            <constraint firstItem="7cp-ns-ldR" firstAttribute="leading" secondItem="lka-cA-6wo" secondAttribute="leading" constant="8" id="USr-uu-pKA"/>
+                            <constraint firstItem="i4B-hf-fl6" firstAttribute="leading" secondItem="lka-cA-6wo" secondAttribute="leading" constant="8" id="eoa-53-HJN"/>
+                            <constraint firstAttribute="bottom" secondItem="i4B-hf-fl6" secondAttribute="bottom" constant="7.5" id="mqa-2d-GcU"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="lka-cA-6wo" firstAttribute="top" secondItem="3Gm-Mo-UaY" secondAttribute="top" constant="4" id="A0s-oJ-zvw"/>
+                    <constraint firstAttribute="bottom" secondItem="lka-cA-6wo" secondAttribute="bottom" constant="4" id="EVW-pJ-dW7"/>
+                    <constraint firstAttribute="bottom" secondItem="lka-cA-6wo" secondAttribute="bottom" constant="66" id="bfr-QF-NR0"/>
+                    <constraint firstAttribute="trailing" secondItem="lka-cA-6wo" secondAttribute="trailing" constant="8" id="qWb-uh-lGN"/>
+                    <constraint firstItem="lka-cA-6wo" firstAttribute="leading" secondItem="3Gm-Mo-UaY" secondAttribute="leading" constant="8" id="qdg-vQ-xHI"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="bfr-QF-NR0"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="containerView" destination="lka-cA-6wo" id="xTo-G2-n3S"/>
+                <outlet property="lblLately" destination="LJW-H5-Yzg" id="gTA-ie-mCZ"/>
+                <outlet property="webView" destination="i4B-hf-fl6" id="V7P-i7-eWO"/>
+            </connections>
+            <point key="canvasLocation" x="-125" y="97.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="tab_btn_left" width="90" height="90"/>
+        <image name="tab_btn_right" width="90" height="90"/>
+    </resources>
+</document>

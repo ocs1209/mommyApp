@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumBarunGothic.ttf">
+            <string>NanumBarunGothic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="72" id="3zR-VQ-KSp" customClass="MoreMainTitleCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3zR-VQ-KSp" id="V8X-zb-I5L">
+                <frame key="frameInset" width="320" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bi-aU-5n2">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이페이지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aZ-hO-nHc">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="13" id="sjo-nR-QGJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="14"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="왕지현" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqw-wx-YmG">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="s3B-KG-RR9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="16"/>
+                                <color key="textColor" red="0.31372549020000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contents_profile_default_large" translatesAutoresizingMaskIntoConstraints="NO" id="e1d-FU-ctd">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="RXD-pG-Dwo"/>
+                                    <constraint firstAttribute="width" constant="37" id="eds-1L-g54"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0aZ-hO-nHc" firstAttribute="top" secondItem="vqw-wx-YmG" secondAttribute="bottom" constant="2" id="84D-Qi-blt"/>
+                            <constraint firstItem="e1d-FU-ctd" firstAttribute="top" secondItem="6bi-aU-5n2" secondAttribute="top" constant="12" id="LUx-Q6-ghf"/>
+                            <constraint firstAttribute="trailing" secondItem="vqw-wx-YmG" secondAttribute="trailing" constant="8" id="MHT-Um-ezW"/>
+                            <constraint firstAttribute="trailing" secondItem="0aZ-hO-nHc" secondAttribute="trailing" constant="8" id="NZx-tI-ikY"/>
+                            <constraint firstItem="vqw-wx-YmG" firstAttribute="top" secondItem="6bi-aU-5n2" secondAttribute="top" constant="12" id="QH3-u7-d5B"/>
+                            <constraint firstItem="e1d-FU-ctd" firstAttribute="leading" secondItem="6bi-aU-5n2" secondAttribute="leading" constant="8" id="X3C-b1-DZQ"/>
+                            <constraint firstItem="vqw-wx-YmG" firstAttribute="leading" secondItem="e1d-FU-ctd" secondAttribute="trailing" constant="6" id="d6e-c6-meB"/>
+                            <constraint firstItem="0aZ-hO-nHc" firstAttribute="leading" secondItem="e1d-FU-ctd" secondAttribute="trailing" constant="6" id="tb3-li-FN4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="6bi-aU-5n2" secondAttribute="bottom" constant="4" id="MGW-yi-VHN"/>
+                    <constraint firstItem="6bi-aU-5n2" firstAttribute="leading" secondItem="V8X-zb-I5L" secondAttribute="leading" constant="8" id="V8x-f9-5Fx"/>
+                    <constraint firstAttribute="trailing" secondItem="6bi-aU-5n2" secondAttribute="trailing" constant="8" id="W6V-Qz-vhx"/>
+                    <constraint firstItem="6bi-aU-5n2" firstAttribute="top" secondItem="V8X-zb-I5L" secondAttribute="top" constant="4" id="m8a-AZ-4nQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="containerView" destination="6bi-aU-5n2" id="yAk-jn-JRS"/>
+                <outlet property="imgProfile" destination="e1d-FU-ctd" id="sXR-gF-mLE"/>
+                <outlet property="nameLabel" destination="vqw-wx-YmG" id="tfN-rm-xr3"/>
+            </connections>
+            <point key="canvasLocation" x="-1010" y="41"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="contents_profile_default_large" width="220" height="220"/>
+    </resources>
+</document>

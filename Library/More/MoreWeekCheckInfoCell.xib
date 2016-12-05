@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumBarunGothic.ttf">
+            <string>NanumBarunGothic</string>
+        </array>
+        <array key="NanumBarunGothicBold.ttf">
+            <string>NanumBarunGothicBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="83" id="BOS-mV-11I" customClass="MoreWeekCheckInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BOS-mV-11I" id="FJ6-QZ-Ai8">
+                <frame key="frameInset" width="375" height="82"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYz-DR-n5C">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1주~4주차" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udG-cQ-S6p">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="hwK-Bn-AXu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="16"/>
+                                <color key="textColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 임신이 되었는지 알 수 없어요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFk-Yx-m6t">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="bq4-vK-GfT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="15"/>
+                                <color key="textColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="udG-cQ-S6p" firstAttribute="leading" secondItem="HYz-DR-n5C" secondAttribute="leading" constant="15" id="21m-4h-9FT"/>
+                            <constraint firstItem="mFk-Yx-m6t" firstAttribute="top" secondItem="udG-cQ-S6p" secondAttribute="bottom" constant="6" id="E0K-oU-B9S"/>
+                            <constraint firstItem="mFk-Yx-m6t" firstAttribute="leading" secondItem="HYz-DR-n5C" secondAttribute="leading" constant="15" id="GH6-iy-eeM"/>
+                            <constraint firstAttribute="trailing" secondItem="mFk-Yx-m6t" secondAttribute="trailing" constant="15" id="JVp-Bp-t9U"/>
+                            <constraint firstItem="udG-cQ-S6p" firstAttribute="top" secondItem="HYz-DR-n5C" secondAttribute="top" constant="15" id="OWR-v1-0XM"/>
+                            <constraint firstAttribute="trailing" secondItem="udG-cQ-S6p" secondAttribute="trailing" constant="15" id="RfJ-yQ-WFY"/>
+                            <constraint firstAttribute="bottom" secondItem="mFk-Yx-m6t" secondAttribute="bottom" constant="15" id="avB-na-LDN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="HYz-DR-n5C" secondAttribute="trailing" constant="8" id="Kj2-QA-DGi"/>
+                    <constraint firstAttribute="bottom" secondItem="HYz-DR-n5C" secondAttribute="bottom" constant="3" id="XKz-AF-wiC"/>
+                    <constraint firstItem="HYz-DR-n5C" firstAttribute="top" secondItem="FJ6-QZ-Ai8" secondAttribute="top" constant="3" id="egG-ey-wMT"/>
+                    <constraint firstItem="HYz-DR-n5C" firstAttribute="leading" secondItem="FJ6-QZ-Ai8" secondAttribute="leading" constant="8" id="nGr-w1-P0h"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="containerView" destination="HYz-DR-n5C" id="s2o-vb-LZW"/>
+                <outlet property="contentsHeightConstraint" destination="bq4-vK-GfT" id="KQQ-DV-ynw"/>
+                <outlet property="lblContent" destination="mFk-Yx-m6t" id="OoH-iV-psi"/>
+                <outlet property="lblTitle" destination="udG-cQ-S6p" id="Xix-Jg-Tua"/>
+            </connections>
+            <point key="canvasLocation" x="-114.5" y="-26.5"/>
+        </tableViewCell>
+    </objects>
+</document>
