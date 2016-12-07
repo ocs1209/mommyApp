@@ -111,7 +111,7 @@
                                    @"504" : @{
                                            @"image" : [UIImage imageNamed:@"contents_icon_emoticon04"],
                                            @"color" : [UIColor colorWithRed:156.0f/255.0f green:113.0f/255.0f blue:228.0f/255.0f alpha:1.0f],
-                                           @"text" : @"즐거움"
+                                           @"text" : @"기쁨"
                                            },
                                    @"505" : @{
                                            @"image" : [UIImage imageNamed:@"contents_icon_emoticon05"],
@@ -121,7 +121,7 @@
                                    @"506" : @{
                                            @"image" : [UIImage imageNamed:@"contents_icon_emoticon06"],
                                            @"color" : [UIColor colorWithRed:220.0f/255.0f green:82.0f/255.0f blue:82.0f/255.0f alpha:1.0f],
-                                           @"text" : @"화남"
+                                           @"text" : @"나쁨"
                                            },
                                    @"507" : @{
                                            @"image" : [UIImage imageNamed: @"contents_icon_emoticon07"],
@@ -145,7 +145,7 @@
                 cell.regDateLabel.text = @"(임시저장)";
                 cell.regDateLabel.textColor = [UIColor colorWithRed:80.0f/255.0f green:80.0f/255.0f blue:80.0f/255.0f alpha:1.0f];
             }else{
-                cell.regDateLabel.text = [[MommyUtils sharedGlobalData] getMommyDate:[data objectForKey:@"reg_dttm"]];
+                cell.regDateLabel.text = [[MommyUtils sharedGlobalData] getMommyDateddMMHHmm:[data objectForKey:@"reg_dttm"]];
             }
             
             
@@ -235,7 +235,7 @@
                 cell.regDateLabel.text = @"(임시저장)";
                 cell.regDateLabel.textColor = [UIColor colorWithRed:80.0f/255.0f green:80.0f/255.0f blue:80.0f/255.0f alpha:1.0f];
             }else{
-                cell.regDateLabel.text = [[MommyUtils sharedGlobalData] getMommyDate:[data objectForKey:@"reg_dttm"]];
+                cell.regDateLabel.text = [[MommyUtils sharedGlobalData] getMommyDateddMMHHmm:[data objectForKey:@"reg_dttm"]];
             }
             
             

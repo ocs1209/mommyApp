@@ -21,22 +21,22 @@
     
 //    UITapGestureRecognizer *labelTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelChange:)];
     UITapGestureRecognizer *nickNameTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelChange:)];
-    UITapGestureRecognizer *emailTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelChange:)];
+//    UITapGestureRecognizer *emailTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelChange:)];
     UITapGestureRecognizer *addressTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelChange:)];
-    UITapGestureRecognizer *babyBirthTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelChange:)];
-    UITapGestureRecognizer *beforeWeightTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelChange:)];
-    UITapGestureRecognizer *weightTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelChange:)];
-    UITapGestureRecognizer *heightTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelChange:)];
+//    UITapGestureRecognizer *babyBirthTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelChange:)];
+//    UITapGestureRecognizer *beforeWeightTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelChange:)];
+//    UITapGestureRecognizer *weightTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelChange:)];
+//    UITapGestureRecognizer *heightTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelChange:)];
     UITapGestureRecognizer *fetusTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(fetusTap)];
 
     [_lblNickName addGestureRecognizer:nickNameTap];
-    [_lblEmail addGestureRecognizer:emailTap];
+//    [_lblEmail addGestureRecognizer:emailTap];
     [_lblAddress addGestureRecognizer:addressTap];
-    [_lblBabyBirth addGestureRecognizer:babyBirthTap];
-    [_lblBeforeWeight addGestureRecognizer:beforeWeightTap];
-    [_lblWeight addGestureRecognizer:weightTap];
-    [_lblHeight addGestureRecognizer:heightTap];
-    [_lblFetus addGestureRecognizer:fetusTap];    
+//    [_lblBabyBirth addGestureRecognizer:babyBirthTap];
+//    [_lblBeforeWeight addGestureRecognizer:beforeWeightTap];
+//    [_lblWeight addGestureRecognizer:weightTap];
+//    [_lblHeight addGestureRecognizer:heightTap];
+    [_lblFetus addGestureRecognizer:fetusTap];
 }
 
 

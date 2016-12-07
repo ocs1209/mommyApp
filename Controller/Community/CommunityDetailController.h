@@ -30,6 +30,7 @@
 @property (assign, nonatomic) Boolean currentLastPageStatus;
 @property (strong, nonatomic) NSString *mento_id;
 @property (strong, nonatomic) NSString *mento_nickname;
+@property (strong, nonatomic) NSString *titleText;
 
 
 - (IBAction)likeButtonAction:(id)sender;

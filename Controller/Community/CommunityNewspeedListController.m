@@ -8,8 +8,10 @@
 
 #import "CommunityNewspeedListController.h"
 
-@interface CommunityNewspeedListController ()
+#define DELETE_ALERT    0
 
+@interface CommunityNewspeedListController ()
+@property (strong, nonatomic) NSString *userId;
 @end
 
 @implementation CommunityNewspeedListController
@@ -84,6 +86,7 @@
     }
     
     self.navigationItem.title = _titleText;
+    _userId = [GlobalData sharedGlobalData].userId;
     
     _cachedImages = [[NSMutableDictionary alloc]init];
     
@@ -160,6 +163,7 @@
     }else if([[segue identifier] isEqualToString:@"moveShowDetailSegue"]){
         CommunityDetailController *vc = [segue destinationViewController];
         [vc setMotherData:_detailData];
+        [vc setTitleText:_titleText];
     }
 }
 
@@ -293,20 +297,29 @@
 
 -(void) addMentor:(id)sender{
     NSLog(@"addMentor");
-    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
-    int cellTag = _cellTag;
-
-    [param setObject: [[_tableListController.newspeedList objectAtIndex:_cellTag] objectForKey:@"mento_key"] forKey:@"mento_key"];
-    
-    [[MommyRequest sharedInstance] mommyCommunityApiService:CommunityMentoInsert authKey:GET_AUTH_TOKEN parameters:param success:^(NSDictionary *data) {
-        if([[NSString stringWithFormat:@"%@", [data objectForKey:@"code"]] isEqualToString:@"0"]){
-            dispatch_sync(dispatch_get_main_queue(), ^{
-                [self changedMento:cellTag insert:@"Y"];
-            });
-        }
-    } error:^(NSError *error) {
+    if ([_userId isEqualToString:[[_tableListController.newspeedList objectAtIndex:_cellTag] objectForKey:@"mento_id"]]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"알림"
+                                                        message:@"자기 자신은 멘토로 추가 할 수 없습니다."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"확인"
+                                              otherButtonTitles:nil];
+        [alert show];
+    } else {
+        NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+        int cellTag = _cellTag;
         
-    }];
+        [param setObject: [[_tableListController.newspeedList objectAtIndex:_cellTag] objectForKey:@"mento_key"] forKey:@"mento_key"];
+        
+        [[MommyRequest sharedInstance] mommyCommunityApiService:CommunityMentoInsert authKey:GET_AUTH_TOKEN parameters:param success:^(NSDictionary *data) {
+            if([[NSString stringWithFormat:@"%@", [data objectForKey:@"code"]] isEqualToString:@"0"]){
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    [self changedMento:cellTag insert:@"Y"];
+                });
+            }
+        } error:^(NSError *error) {
+            
+        }];
+    }
 }
 
 -(void) deleteMentor:(id)sender{
@@ -326,21 +339,14 @@
 }
 
 -(void) deleteMessage:(id)sender{
-    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
-    int cellTag = _cellTag;
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"알림"
+                                                    message:@"선택된 게시물을 삭제하시겠습니까?"
+                                                   delegate:self
+                                          cancelButtonTitle:@"취소"
+                                          otherButtonTitles:@"삭제", nil];
     
-    [param setObject:[[_tableListController.newspeedList objectAtIndex:cellTag] objectForKey:@"community_key"] forKey:@"community_key"];
-    
-    [[MommyRequest sharedInstance] mommyCommunityApiService:CommunityDelete authKey:GET_AUTH_TOKEN parameters:param success:^(NSDictionary *data) {
-        if([[NSString stringWithFormat:@"%@", [data objectForKey:@"code"]] isEqualToString:@"0"]){
-            dispatch_sync(dispatch_get_main_queue(), ^{
-                [_tableListController.newspeedList removeObjectAtIndex:cellTag];
-                [_tableView reloadData];
-            });
-        }
-    } error:^(NSError *error) {
-        
-    }];
+    [alert setTag:DELETE_ALERT];
+    [alert show];
 }
 
 
@@ -543,6 +549,34 @@
     [_moveWriteViewButton removeFromSuperview];
     [self presentViewController:_imageViewer animated:YES completion:nil];
 
+}
+
+#pragma mark alertView delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (alertView.tag) {
+        case DELETE_ALERT:
+            if (buttonIndex == 1) {
+                NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+                int cellTag = _cellTag;
+                
+                [param setObject:[[_tableListController.newspeedList objectAtIndex:cellTag] objectForKey:@"community_key"] forKey:@"community_key"];
+                
+                [[MommyRequest sharedInstance] mommyCommunityApiService:CommunityDelete authKey:GET_AUTH_TOKEN parameters:param success:^(NSDictionary *data) {
+                    if([[NSString stringWithFormat:@"%@", [data objectForKey:@"code"]] isEqualToString:@"0"]){
+                        dispatch_sync(dispatch_get_main_queue(), ^{
+                            [_tableListController.newspeedList removeObjectAtIndex:cellTag];
+                            [_tableView reloadData];
+                        });
+                    }
+                } error:^(NSError *error) {
+                    
+                }];
+            }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 @end

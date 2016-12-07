@@ -133,7 +133,6 @@
     [[MommyRequest sharedInstance] mommyDashboardApiService:DashboardMain authKey:auth_key parameters:parameters success:^(NSDictionary *data){
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            
             long code = [data[@"code"] longValue];
             
             // 실패시
@@ -155,9 +154,14 @@
             _mainList = [NSDictionary dictionaryWithDictionary:data[@"result"]];
             
             if(_mainInfoContainerViewController != nil){
-                
-                _mainInfoContainerViewController.momWeekLabel.text = [NSString stringWithFormat:@"%@주", _mainList[@"baby_info"][@"mom_week"]];
-                _mainInfoContainerViewController.lblDday.text = [NSString stringWithFormat:@"D-%@", _mainList[@"baby_info"][@"d_day"]];
+                NSString *dDay = [NSString stringWithFormat:@"%@", _mainList[@"baby_info"][@"d_day"]];
+                if ([_mainList[@"birth_yn"] isEqualToString:@"Y"]) {
+                    _mainInfoContainerViewController.momWeekLabel.text = [NSString stringWithFormat:@"산후%@주", _mainList[@"baby_info"][@"mom_week"]];
+                    dDay = [dDay stringByReplacingOccurrencesOfString:@"-" withString:@"+"];
+                } else {
+                    _mainInfoContainerViewController.momWeekLabel.text = [NSString stringWithFormat:@"%@주", _mainList[@"baby_info"][@"mom_week"]];
+                }
+                _mainInfoContainerViewController.lblDday.text = [NSString stringWithFormat:@"D%@", dDay];
                 _mainInfoContainerViewController.bobyInfoTitleLabel.text = _mainList[@"baby_info"][@"info"];
                 _mainInfoContainerViewController.weightLabel.text = [NSString stringWithFormat:@"%@", _mainList[@"weight_info"][@"weight"]];
                 _mainInfoContainerViewController.weightResultLable.text = [NSString stringWithFormat:@"%@", _mainList[@"weight_info"][@"result"]];

@@ -110,7 +110,7 @@
     [_timeButton setInputTextFlag:YES];
     
     NSDateFormatter *formatter2 = [[NSDateFormatter alloc]init];
-    [formatter2 setDateFormat:@"HH:mm"];
+    [formatter2 setDateFormat:@"HH시mm분"];
     [_timeButton setTimeFormatter:formatter2];
     [_timeButton setDelegate:self];
     
@@ -208,7 +208,7 @@
 - (void)saveDiary{
     if([_titleTextField.text isEqualToString:@""] || [_contentsTextView.text isEqualToString:@""]){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"알림"
-                                                        message:@"입력하신 내용을 다시 확인해주세요."
+                                                        message:@"제목과 내용을 입력해 주세요."
                                                        delegate:self
                                               cancelButtonTitle:@"확인"
                                               otherButtonTitles:nil, nil];

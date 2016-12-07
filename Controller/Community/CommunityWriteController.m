@@ -43,7 +43,7 @@
     /** Placeholder Setting **/
     _placeholderLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, _contentsTextView.frame.size.width - 10.0, 34.0)];
     
-    [_placeholderLabel setText:@"내용을 입력해주세요"];
+    [_placeholderLabel setText:@"오늘 있었던 일들을 누군가와 공유해 보세요."];
     [_placeholderLabel setBackgroundColor:[UIColor clearColor]];
     [_placeholderLabel setTextColor:[UIColor colorWithRed:199.0/255.0f green:199.0/255.0f  blue:205.0/255.0f alpha:1.0]];
     [_placeholderLabel setFont:[UIFont fontWithName:@"NanumBarunGothic" size:15]];
@@ -105,7 +105,7 @@
 - (void)insertCommunity{
     if([_contentsTextView.text isEqualToString:@""]){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"알림"
-                                                        message:@"입력하신 내용을 다시 확인해주세요."
+                                                        message:@"내용을 입력해 주세요."
                                                        delegate:self
                                               cancelButtonTitle:@"확인"
                                               otherButtonTitles:nil, nil];

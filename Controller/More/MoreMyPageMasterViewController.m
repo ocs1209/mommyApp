@@ -233,7 +233,8 @@
 
 - (IBAction)deleteUserAction:(id)sender {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"알림"
-                                                    message:@"탈퇴 후 등록한 활동정보, 다이어리 등의 정보를 복구하실 수 없습니다.\n본 서비스에서 탈퇴하시겠습니까?"
+//                                                    message:@"탈퇴 후 등록한 활동정보, 다이어리 등의 정보를 복구하실 수 없습니다.\n본 서비스에서 탈퇴하시겠습니까?"
+                                                    message:@"회원탈퇴를 진행하시겠습니까?\n회원탈퇴 시 서비스 내 모든 사용자\n정보가 삭제되며 복구하실 수 없으니 다시\n한번 확인해 주세요.\n\n[삭제대상]\n-사용자 프로틸 정보\n-커뮤니티 게시글/멘토\n-쪽지\n-다이어리(일정)등"
                                                    delegate:self
                                           cancelButtonTitle:@"취소"
                                           otherButtonTitles:@"회원탈퇴", nil];

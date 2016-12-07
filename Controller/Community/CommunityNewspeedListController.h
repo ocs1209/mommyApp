@@ -18,7 +18,8 @@
 
 #define PAGE_SIZE [[NSNumber alloc] initWithInt:30]
 
-@interface CommunityNewspeedListController : CommonViewController <CommunityNewspeedListModelDelegate, CommunityProfilePopupViewDelegate>
+@interface CommunityNewspeedListController : CommonViewController <CommunityNewspeedListModelDelegate, CommunityProfilePopupViewDelegate,
+    UIAlertViewDelegate>
 
 @property (nonatomic, strong) UIButton *moveWriteViewButton;
 @property (strong, nonatomic) CommunityNewspeedListModel *tableListController;

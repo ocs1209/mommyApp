@@ -48,12 +48,16 @@
                 [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
                     
                     CGRect execersizeViewframe = _containerExecersizeView.frame;
+                    NSLog(@"execer origin y : %f", execersizeViewframe.origin.y);
                     execersizeViewframe.origin.y = execersizeViewframe.origin.y - 120;
+                    NSLog(@"after execer origin y : %f", execersizeViewframe.origin.y);
                     _containerExecersizeView.frame = execersizeViewframe;
                     _lblExecersize.hidden = NO;
                     
                     CGRect nutritionViewframe = _containerNutritionView.frame;
+                    NSLog(@"nutritionViewframe origin y : %f", nutritionViewframe.origin.y);
                     nutritionViewframe.origin.y = nutritionViewframe.origin.y - 60;
+                    NSLog(@"after nutritionViewframe origin y : %f", nutritionViewframe.origin.y);
                     _containerNutritionView.frame = nutritionViewframe;
                     _lblNutrition.hidden = NO;
                     
@@ -75,13 +79,19 @@
         [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             
             CGRect execersizeViewframe = _containerExecersizeView.frame;
-            execersizeViewframe.origin.y = execersizeViewframe.origin.y + 60;
+//            execersizeViewframe.origin.y = execersizeViewframe.origin.y + 60;
+            NSLog(@"m execer origin y : %f", execersizeViewframe.origin.y);
+            execersizeViewframe.origin.y = execersizeViewframe.origin.y + 120;
+            NSLog(@"after m execer origin y : %f", execersizeViewframe.origin.y);
             _containerExecersizeView.frame = execersizeViewframe;
             _lblExecersize.hidden = YES;
             
             
             CGRect nutritionViewframe = _containerNutritionView.frame;
-            nutritionViewframe.origin.y = nutritionViewframe.origin.y + 120;
+//            nutritionViewframe.origin.y = nutritionViewframe.origin.y + 120;
+            NSLog(@"m nutritionViewframe origin y : %f", nutritionViewframe.origin.y);
+            nutritionViewframe.origin.y = nutritionViewframe.origin.y + 60;
+            NSLog(@"after m nutritionViewframe origin y : %f", nutritionViewframe.origin.y);
             _containerNutritionView.frame = nutritionViewframe;
             _lblNutrition.hidden = YES;
             

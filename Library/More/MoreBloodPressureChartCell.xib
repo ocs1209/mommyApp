@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,14 +20,17 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="263"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="th2-4q-ytV" id="3Gm-Mo-UaY">
-                <frame key="frameInset" width="320" height="262"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="262"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lka-cA-6wo">
+                        <rect key="frame" x="8" y="4" width="304" height="254.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7cp-ns-ldR">
+                                <rect key="frame" x="8" y="8" width="288" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oj9-ed-kdU">
+                                        <rect key="frame" x="16" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="FJq-V9-Ite"/>
                                             <constraint firstAttribute="width" constant="40" id="Wm2-aQ-1E4"/>
@@ -35,6 +41,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 5건" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJW-H5-Yzg">
+                                        <rect key="frame" x="64" y="9" width="160" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="160" id="18C-xg-kTl"/>
                                             <constraint firstAttribute="height" constant="21" id="lhe-IR-l1c"/>
@@ -44,6 +51,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pab-nh-Vol">
+                                        <rect key="frame" x="232" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="bc9-75-pi8"/>
                                             <constraint firstAttribute="width" constant="40" id="wvt-jG-g1V"/>
@@ -66,6 +74,7 @@
                                 </constraints>
                             </view>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4B-hf-fl6">
+                                <rect key="frame" x="8" y="56" width="288" height="191"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>

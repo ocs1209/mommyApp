@@ -57,7 +57,8 @@
         if([[data objectForKey:@"like_cnt"] intValue] != 0){
             cell.likeCountLabel.text = [NSString stringWithFormat:@"%@", [data objectForKey:@"like_cnt"]];
         }else{
-            cell.likeCountLabel.text = @"좋아요";
+//            cell.likeCountLabel.text = @"좋아요";
+            cell.likeCountLabel.text = [NSString stringWithFormat:@"%@", @"0"];
         }
         
         if([[data objectForKey:@"reply_cnt"] intValue] != 0){
@@ -167,7 +168,8 @@
         if([[data objectForKey:@"like_cnt"] intValue] != 0){
             cell.likeCountLabel.text = [NSString stringWithFormat:@"%@", [data objectForKey:@"like_cnt"]];
         }else{
-            cell.likeCountLabel.text = @"좋아요";
+//            cell.likeCountLabel.text = @"좋아요";
+            cell.likeCountLabel.text = [NSString stringWithFormat:@"%@", @"0"];
         }
         
         if([[data objectForKey:@"reply_cnt"] intValue] != 0){
@@ -359,7 +361,8 @@
                         [_newspeedList replaceObjectAtIndex:[sender tag] withObject:changedData];
                     }else{
                         dispatch_sync(dispatch_get_main_queue(), ^{
-                            [(CommunityNewspeedBasicCustomCell *)sender likeCountLabel].text = @"좋아요";
+//                            [(CommunityNewspeedBasicCustomCell *)sender likeCountLabel].text = @"좋아요";
+                            [(CommunityNewspeedBasicCustomCell *)sender likeCountLabel].text = [NSString stringWithFormat:@"%@", @"0"];
                         });
                     }
                     
@@ -393,7 +396,8 @@
                     [_newspeedList replaceObjectAtIndex:[sender tag] withObject:changedData];
                 }else{
                     dispatch_sync(dispatch_get_main_queue(), ^{
-                        [(CommunityNewspeedBasicCustomCell *)sender likeCountLabel].text = @"좋아요";
+//                        [(CommunityNewspeedBasicCustomCell *)sender likeCountLabel].text = @"좋아요";
+                        [(CommunityNewspeedBasicCustomCell *)sender likeCountLabel].text = [NSString stringWithFormat:@"%@", @"0"];
                     });
                 }
                 

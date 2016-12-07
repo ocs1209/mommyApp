@@ -38,6 +38,7 @@ static BOOL keyboardShow = NO;
     self.navigationItem.leftBarButtonItem = backButton;
     self.navigationItem.hidesBackButton = YES;
     
+    self.navigationItem.title = _titleText;
     
     /** keypad Setting **/
     // 키보드 노티피케이션

@@ -137,7 +137,7 @@
             cell.editingAccessoryView = moreBloodPressureDeleteButtonController.view;
             
             NSDictionary *dic = _arrayList[indexPath.row - 2];
-            cell.lblWriteTime.text = [[MommyUtils sharedGlobalData] getMommyDate:dic[@"reg_dttm"]];
+            cell.lblWriteTime.text = [[MommyUtils sharedGlobalData] getMommyDateyyyyMMddk:dic[@"reg_dttm"]];
             cell.lblBlooodPressure.text = [NSString stringWithFormat:@"%@ / %@", dic[@"systolic"], dic[@"diastolic"]];
             NSNumber *pulse = dic[@"pulse"];
             cell.lblPurse.text = [NSString stringWithFormat:@"%ld", (long)[pulse integerValue]];

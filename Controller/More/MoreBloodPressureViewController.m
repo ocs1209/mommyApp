@@ -324,7 +324,7 @@
     
 //    cell.lblLately.text = [NSString stringWithFormat:@"최근 5건(%ld/%ld)", (long)_currentPage + 4 > (long)_totalPage ? (long)_totalPage : (long)_currentPage + 4, (long)_totalPage];
     
-    cell.lblLately.text = [NSString stringWithFormat:@"%ld건~%ld건 (총%ld건)", (long)_currentPage, (long)_currentPage + 4 > (long)_totalPage ? (long)_totalPage : (long)_currentPage + 4, (long)_totalPage];
+    cell.lblLately.text = [NSString stringWithFormat:@"%ld~%ld건/총%ld건", (long)_currentPage, (long)_currentPage + 4 > (long)_totalPage ? (long)_totalPage : (long)_currentPage + 4, (long)_totalPage];
     
 }
 
